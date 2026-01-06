@@ -1,0 +1,159 @@
+:root {
+  --main-bg: #1e1e1e;
+
+  --main-fonts: #d4d4d4;
+
+  --border-color: #3c3c3c;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Fira Code", monospace;
+  background: var(--main-bg);
+  padding: 40px 20px;
+  color: var(--main-fonts);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 50px;
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 1px;
+}
+
+#container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.container {
+  background: #252526;
+  border-radius: 10px;
+  padding: 20px;
+  flex: 1;
+  border: 1px solid var(--border-color);
+}
+
+.container h2 {
+  margin-bottom: 16px;
+  color: #cccccc;
+  font-weight: 600;
+  font-size: 1.2rem;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 4px;
+}
+
+textarea {
+  width: 100%;
+  min-height: 150px;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-family: "Fira Code", monospace;
+  resize: vertical;
+  background: var(--main-bg);
+  color: var(--main-fonts);
+  outline: none;
+}
+
+#html-output,
+#preview {
+  width: 100%;
+  min-height: 150px;
+  padding: 12px;
+  border-radius: 6px;
+  background-color: var(--main-bg);
+  border: 1px solid var(--border-color);
+  white-space: pre-wrap;
+  overflow-y: auto;
+  font-family: "Fira Code", monospace;
+  color: var(--main-fonts);
+}
+
+#preview h1 {
+  font-size: 2rem;
+  color: #569cd6;
+}
+#preview h2 {
+  font-size: 1.7rem;
+  color: #4ec9b0;
+}
+#preview h3 {
+  font-size: 1.4rem;
+  color: #c586c0;
+}
+
+#preview strong {
+  font-weight: 700;
+  color: #dcdcaa;
+}
+#preview em {
+  font-style: italic;
+  color: #9cdcfe;
+}
+
+#preview blockquote {
+  border-left: 3px solid #6a9955;
+  padding-left: 12px;
+  color: #ce9178;
+  font-style: italic;
+  background: #2d2d2d;
+  border-radius: 4px;
+  margin: 8px 0;
+}
+
+#preview a {
+  color: #4fc1ff;
+  text-decoration: underline;
+}
+
+#preview img {
+  max-width: 100%;
+  border-radius: 4px;
+  margin: 8px 0;
+}
+
+#html-output::-webkit-scrollbar,
+#preview::-webkit-scrollbar,
+textarea::-webkit-scrollbar {
+  width: 10px;
+}
+
+#html-output::-webkit-scrollbar-thumb,
+#preview::-webkit-scrollbar-thumb,
+textarea::-webkit-scrollbar-thumb {
+  background: #555555;
+  border-radius: 5px;
+}
+
+#html-output::-webkit-scrollbar-track,
+#preview::-webkit-scrollbar-track,
+textarea::-webkit-scrollbar-track {
+  background: #2a2a2a;
+  border-radius: 5px;
+}
+
+@media (min-width: 900px) {
+  #container {
+    flex-direction: row;
+  }
+
+  .container {
+    flex: 1;
+  }
+
+  textarea,
+  #html-output,
+  #preview {
+    min-height: 250px;
+  }
+}
